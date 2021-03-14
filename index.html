@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Movie</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section id="movie-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <form action="paymentdetails.html" class="was-validated">
+                        <div class="form-group">
+                            <select class="custom-select" id= "movie" required>
+                                <option value="">Pick a Movie</option>
+                                <option value="13.00">AVENGERS ENDGAME  ($13.00)</option>
+                                <option value="15.00">LIFE OF PIE ($15.00)</option>
+                                <option value="10.00">INCEPTION ($10.00)</option>
+                            </select>
+                            <div class="invalid-feedback">please select a movie.</div>
+                        </div>
+
+                        <h1>Seatplan</h1>
+                        <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                            <div class="seat"></div>
+                        </div>
+
+                        <ul class="showcase">
+                            <li>
+                                <div class="seat"></div>
+                                <small>N/A</small>
+                            </li>
+                            <li>
+                                <div class="seat selected"></div>
+                                <small>Selected seats</small>
+                            </li>
+                            <li>
+                                <div class="seat occupied"></div>
+                                <small>Occupied seats</small>
+                            </li>
+                        </ul>
+
+                        <p class="text">
+                            <!-- Movie selected: <span id="movie-name"></span> <br> -->
+                            <!-- Ticket Price: $<span id="ticket-price"></span> <br> -->
+                            Number of seats selected: <span id="count">0</span> <br>
+                            Total Price: $<span id="price">0</span> <br>
+                        </p>
+                        <br>
+
+                        <input type="submit" value="BUY SELECTED SEATS" class="btn btn-primary">
+
+                        <!-- form validation -->
+                        <script>
+                            (function () {
+                                'use strict';
+                                window.addEventListener('load', function () {
+                                    var forms = document.getElementsByClassName('needs-validation');
+                                    var validation = Array.prototype.filter.call(forms, function (form) {
+                                        form.addEventListener('submit', function (event) {
+                                            if (form.checkValidity() === false) {
+                                                event.preventDefault();
+                                                event.stopPropagation();
+                                            }
+                                            form.classList.add('was-validated');
+                                        }, false);
+                                    });
+                                }, false);
+                            })();
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
